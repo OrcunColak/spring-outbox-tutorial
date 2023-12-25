@@ -13,3 +13,6 @@ An alternative to poller could be using CDC to capture database events
 # Swagger
 Go to  
 http://localhost:8080/swagger-ui/index.html
+
+for Open API YAML go to  
+http://localhost:8080/v3/api-docs.yaml
