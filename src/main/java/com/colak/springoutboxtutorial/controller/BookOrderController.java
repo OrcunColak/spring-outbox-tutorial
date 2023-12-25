@@ -15,8 +15,8 @@ public class BookOrderController {
 
     private final BookOrderService bookOrderService;
 
-    @PostMapping("/createOrder")
-    public void createOrder(@RequestBody BookOrderDTO bookOrderDTO) {
-        bookOrderService.placeOrder(bookOrderDTO);
+    @PostMapping("/saveOrder")
+    public void saveOrder(@RequestBody BookOrderDTO bookOrderDTO) {
+        bookOrderService.saveOrder(bookOrderDTO);
     }
 }

@@ -9,7 +9,7 @@ import lombok.ToString;
 @ToString
 public class BookOrderDTO {
 
-    int orderId;
+    Integer orderId;
 
     int customerId;
 
