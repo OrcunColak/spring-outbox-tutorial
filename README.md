@@ -4,10 +4,11 @@ https://dip-mazumder.medium.com/consistency-in-microservices-transactional-outbo
 
 This project demonstrates outbox pattern usage. 
 
-When Order controller gets a post request, the OrderService inserts a new OutboxEvent to database.  
+When BookOrder controller gets a post request, the BookOrderService inserts a new OutboxEvent to database.  
 The OutboxPoller polls the database in regular intervals and publishes new records to Kafka  
 There are two Kafka Listeners that process the message 
 
+An alternative to poller could be using CDC to capture database events
 
 # Swagger
 Go to  
