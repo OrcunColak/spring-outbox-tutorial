@@ -2,6 +2,7 @@ package com.colak.springoutboxtutorial.service.impl;
 
 import com.colak.springoutboxtutorial.dto.BookOrderDTO;
 import com.colak.springoutboxtutorial.jpa.BookOrder;
+import com.colak.springoutboxtutorial.jpa.EventStatusEnum;
 import com.colak.springoutboxtutorial.jpa.OutboxEvent;
 import com.colak.springoutboxtutorial.mapstruct.BookOrderMapper;
 import com.colak.springoutboxtutorial.repository.OrderRepository;
@@ -10,6 +11,9 @@ import com.colak.springoutboxtutorial.service.BookOrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @RequiredArgsConstructor
 @Service
@@ -40,6 +44,9 @@ public class BookOrderServiceImpl implements BookOrderService {
         OutboxEvent outboxEvent = new OutboxEvent();
         outboxEvent.setEventType("BookOrderSaved");
         outboxEvent.setEventPayload(eventPayload);
+        outboxEvent.setEventStatus(EventStatusEnum.COMPLETED);
+        outboxEvent.setCreatedDate(LocalDateTime.now());
+
         outboxEventRepository.save(outboxEvent);
     }
 

@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.1</version>
+        <version>3.2.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.colak</groupId>
@@ -13,6 +13,7 @@
     <version>1.0.0</version>
     <name>spring-outbox-tutorial</name>
     <description>Demo project for Spring Boot and Outbox Pattern</description>
+
     <properties>
         <java.version>21</java.version>
         <mapstruct.version>1.6.0.Beta1</mapstruct.version>
@@ -70,6 +71,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Mapstruct -->
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
@@ -79,6 +81,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-properties-migrator</artifactId>
         </dependency>
 
         <!--JPA-->
@@ -91,6 +98,7 @@
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
+
 
         <!--Kafka-->
         <dependency>
@@ -106,7 +114,7 @@
             <version>2.2.0</version>
         </dependency>
 
-        <!--Test-->
+        <!--Testing-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
