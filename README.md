@@ -16,6 +16,15 @@ An alternative to poller could be using CDC to capture database events
 There is another example that uses RabbitMq instead of Kafka here
 https://medium.com/@omernaci/transactional-outbox-pattern-72ba980514bc
 
+# NoSQL Outbox Pattern
+
+For NoSQL databases sometimes we lose the luxury of transactions.
+...
+The solution, though, is surprisingly straightforward: we denormalize the data.
+Since we can’t rely on sequential writes, denormalizing the data allows us to condense everything into a single write
+operation.
+https://readmedium.com/interview-so-how-do-you-do-a-transaction-with-nosql-databases-c3d80bc7d314
+
 # Swagger
 
 Go to  
